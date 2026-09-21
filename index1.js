@@ -35,19 +35,14 @@ export function echo(word, n) {
  */
 export function echoWithSpace(word, n) {
   // TODO
-  if (word === null || word === "") {
-    return "";
-  }
   let result = "";
   for (let i = 1; i < n; i++) {
     result = result + word + " ";
   }
-  result = result + word;
   console.log(result);
   return result;
 }
-// console.log(echoWithSpace("a", 2));
-console.log(echoWithSpace("", 0));
+console.log(echoWithSpace("a", 2));
 
 /**
  * @param {number} n - The number to stop at
