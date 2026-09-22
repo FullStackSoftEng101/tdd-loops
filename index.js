@@ -11,15 +11,24 @@
  * echo("test", 1); // "test"
  */
 export function echo(word, n) {
-  // TODO
-  let result = "";
-  for (let i = 0; i < n; i++) {
-    result = result + word;
+  // TODO;
+  //   let result = "";
+  //   for (let i = 0; i < n; i++) {
+  //     result = result + word;
+  //   }
+  //   // console.log(result);
+  //   return result;
+  // }
+  // console.log(echo("bird", 3));
+  let repeated = "";
+  let i = 0;
+  while (i < n) {
+    repeated += word;
+    i += 1;
   }
-  // console.log(result);
-  return result;
+  return repeated;
 }
-// console.log(echo("bird", 3));
+console.log(echo("bird", 3));
 
 /**
  * @param {string} word - The word to repeat.
@@ -35,19 +44,32 @@ export function echo(word, n) {
  */
 export function echoWithSpace(word, n) {
   // TODO
-  if (word === null || word === "") {
+  //   if (word === null || word === "") {
+  //     return "";
+  //   }
+  //   let result = "";
+  //   for (let i = 1; i < n; i++) {
+  //     result = result + word + " ";
+  //   }
+  //   result = result + word;
+  //   console.log(result);
+  //   return result;
+  // }
+  // // console.log(echoWithSpace("a", 2));
+  // console.log(echoWithSpace("", 0));
+  let repeated = "";
+  let i = 1;
+  if (n <= 0 || word === "") {
     return "";
   }
-  let result = "";
-  for (let i = 1; i < n; i++) {
-    result = result + word + " ";
+  while (i < n) {
+    repeated += word + " ";
+    i += 1;
   }
-  result = result + word;
-  console.log(result);
-  return result;
+  repeated += word;
+  return repeated;
 }
-// console.log(echoWithSpace("a", 2));
-console.log(echoWithSpace("", 0));
+console.log(echoWithSpace("badger", 3));
 
 /**
  * @param {number} n - The number to stop at
